@@ -1,6 +1,6 @@
 # Library App
 
-A simple JavaScript library app built as part of my [#100DaysOfCode](https://www.100daysofcode.com/) journey.  
+A simple JavaScript library app built as part of The Odin Project assignment and [#100DaysOfCode](https://www.100daysofcode.com/) journey.  
 This project lets you add, display, update, and remove books from a collection using vanilla JS, HTML, and CSS.  
 
 ---
