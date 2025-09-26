@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Library</h1>
+    <div>
+        <table>
+            <caption>Book list</caption>
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read status</th>
+                </tr>
+            </thead>
+            <tbody id="bookContainer">
+
+            </tbody>
+            <template id="bookRowTemplate">
+                <tr class="book-id" data-id="">
+                    <td class="title"></td>
+                    <td class="author"></td>
+                    <td class="pages"></td>
+                    <td class="read"></td>
+                    <td><button class="toggleRead">Status</button></td>
+                    <td><button class="deleteBook">Delete</button></td>
+                </tr>
+            </template>
+        </table>
+    </div>
+    <button id="openForm">Add new book</button>
+
+    <dialog id="formDialog">
+        <div class="dialog-container">
+            <p>
+                <label>Book Title</label>
+                <input type="text" autocomplete="off" autofocus name="bookName" id="bookName">
+            </p>
+            
+            <p>
+                <label>Name of Author</label>
+                <input type="text" autocomplete="off" name="author" id="author">
+            </p>
+            
+            <p>
+                <label>Number of pages</label>
+                <input type="number" autocomplete="off" name="pages" id="pages">
+            </p>
+            
+            <p>
+                <label>Reading status</label>
+                <select name="read" id="read">
+                    <option value="want to read">want to read</option>
+                    <option value="reading">reading</option>
+                    <option value="done">done</option>
+                </select>
+            </p>
+            <form method="dialog">
+                <button id="addNewBook">Save Book</button>
+                <button>Close</button>
+            </form>
+        </div>
+    </dialog>
+    <script src="/books.js">
+
+    </script>
+</body>
+</html>

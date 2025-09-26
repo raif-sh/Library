@@ -1,0 +1,103 @@
+/* Cozy, minimal styling */
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #fdfcf7;
+    color: #333;
+    margin: 2rem auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #5a4634;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffaf3;
+    border: 1px solid #e2dcd3;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+caption {
+    caption-side: top;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: #5a4634;
+}
+
+th, td {
+    border: 1px solid #e2dcd3;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2ede6;
+    color: #4a3d2f;
+}
+
+tr:nth-child(even) {
+    background-color: #fcfaf6; 
+}
+
+button {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #cbbfae;
+    border-radius: 4px;
+    background-color: #f7f3eb;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #eae2d8;
+}
+
+#openForm {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+dialog {
+    width: clamp(300px, 50%, 800px);
+    border: none;
+    border-radius: 8px;
+    background: #fffdf9;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.dialog-container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+dialog::backdrop {
+    background: rgba(90, 70, 52, 0.3);
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: #5a4634;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cbbfae;
+    border-radius: 4px;
+    background: #fffefc;
+    font-family: inherit;
+}
