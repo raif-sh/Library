@@ -14,26 +14,25 @@ const getFormDialog = document.querySelector("#formDialog");
 const addNewBookButton = document.querySelector("#addNewBook");
 const openModalButton = document.querySelector("#openForm");
 
-// Initiate constructor for book object
-function Book(id, title, author, pages, read){
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor")
+// Initiate class for book object
+class Book {
+    constructor(id, title, author, pages, read) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
-    this.id = id;
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
-        return this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read;
-    }
-}
 
-// Add read status method to book prototype
-Book.prototype.toggleRead = function() {
-    const states = ['want to read', 'reading', 'done'];
-    const i = states.indexOf(this.read);
-    this.read = i === -1 ? states[0] : states[(i + 1) % states.length];
+    info() {
+        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
+    }
+
+    toggleRead() {
+        const states = ['want to read', 'reading', 'done'];
+        const i = states.indexOf(this.read);
+        this.read = i === -1 ? states[0] : states[(i + 1) % states.length];
+    }
 }
 
 // Function to add new book to library
