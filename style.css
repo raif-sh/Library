@@ -101,3 +101,8 @@ input, select {
     background: #fffefc;
     font-family: inherit;
 }
+
+.error {
+    font-size: small;
+    color: rgb(179, 25, 25);
+}
