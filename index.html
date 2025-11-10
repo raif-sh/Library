@@ -35,17 +35,19 @@
         </table>
     </div>
     <button id="openForm">Add new book</button>
-
+    
     <dialog id="formDialog">
         <div class="dialog-container">
             <p>
                 <label>Book Title</label>
-                <input type="text" autocomplete="off" autofocus name="bookName" id="bookName">
+                <input type="text" autocomplete="off" autofocus name="bookName" id="bookName" required minlength="3">
+                <span class="error" aria-live="polite"></span>
             </p>
             
             <p>
                 <label>Name of Author</label>
-                <input type="text" autocomplete="off" name="author" id="author">
+                <input type="text" autocomplete="off" name="author" id="author" required minlength="3">
+                <span class="error" aria-live="polite"></span>
             </p>
             
             <p>
@@ -67,7 +69,7 @@
             </form>
         </div>
     </dialog>
-    <script src="/books.js">
+    <script type="module" src="/books.js">
 
     </script>
 </body>

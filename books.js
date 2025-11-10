@@ -1,3 +1,5 @@
+import { validateAuthor, validateBook } from "./form-validation.js"
+
 // Initiate array to store all book objects
 // const myLibrary = [];
 
@@ -38,6 +40,14 @@ class Book {
 // Function to add new book to library
 function addBookToLibrary(e) {
     e.preventDefault()
+
+    if (validateBook() === false) {
+        return;
+    } else if (validateAuthor() === false) {
+        return;
+    }
+    
+    
 
     let newBook = new Book(
         crypto.randomUUID(), 
